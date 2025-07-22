@@ -1,80 +1,66 @@
-# 🎨 Cartoonify Image Editor — Real-Time Image Cartoonification Using MATLAB
+# Cartoonify Image Editor (MATLAB Project)
 
-> A MATLAB-based Computer Vision project for converting real-world images into cartoon-styled artwork using edge detection, bilateral filtering, and color quantization.
-
----
-
-## 🧠 Problem Statement
-
-Many users often desire cartoon-style image transformations for artistic, social media, or fun purposes. This project presents a simple yet effective real-time image cartoonification system using MATLAB, enabling users to cartoonify images from their local storage or directly via webcam.
+This is a simple MATLAB project that takes an image and converts it into a cartoon-like version using computer vision techniques. It can take images from your computer or directly through a webcam.
 
 ---
 
-## 💡 Features
+## Project Overview
 
-- 🖼️ Accepts input via **local image file** or **webcam**
-- 🧹 Removes noise using **Median Filtering**
-- ✨ Smoothens image using **Bilateral Filtering**
-- 🖍️ Detects and boldens edges for a sketch-like effect
-- 🌈 Performs **Color Quantization** to reduce color palette and create a cartoon effect
-- 📷 Displays and allows saving:
-  - Original Image
-  - Edge-detected Image
-  - Cartoonified Output
+The goal of this project is to create a cartoon version of an image. The program performs noise removal, edge detection, color simplification, and finally combines these effects to create a cartoonified image.
 
 ---
 
-## ⚙️ Technologies Used
+## Features
 
-- **Language:** MATLAB
-- **Concepts:** Computer Vision, Edge Detection, Bilateral Filtering, Color Quantization
-- **Libraries:** Built-in MATLAB Image Processing Toolbox (no external dependencies)
-
----
-
-## 📸 Output
-
-The program displays a GUI with three images side-by-side:
-1. **Original Image**
-2. **Edge Detection Output**
-3. **Final Cartoonified Image**
-
-Users can save the final output from the GUI.
+- Input image from local files or webcam
+- Noise removal using a median filter
+- Edge-preserving smoothing using bilateral filter
+- Edge detection to highlight boundaries
+- Color quantization to simplify colors
+- Display of original, edge, and cartoonified images side by side
+- Option to save the final output
 
 ---
 
-## 🧾 Algorithm Overview
+## How It Works (Algorithm Steps)
 
-1. **Input Image**: Load via local file or webcam
-2. **Denoising**: Apply median filter to remove salt-and-pepper noise
-3. **Smoothing**: Use bilateral filtering to preserve edges while smoothing regions
-4. **Edge Detection**: Generate an edge mask to highlight contours
-5. **Edge Overlay**: Combine smoothed image and edge mask
-6. **Color Quantization**: Reduce the number of colors for a flat, cartoon-style look
-7. **Display Output**: Show all three images and allow saving the cartoonified version
-
----
-
-## ▶️ How to Run
-
-1. Open the `.m` file in **MATLAB**
-2. On **line 4**, enter the name of your image file (e.g., `'image.jpg'`)  
-   > Ensure the image is in the same folder as the code.
-3. Click **Run** from the **Editor** tab
-4. A dialog box will appear:
-   - Click **"Local Image"** to use a file from your computer
-   - Click **"Webcam"** to capture a live image
-5. The program will process and display the outputs
-6. Save the result using `File → Save`
+1. Input image (from file or webcam)
+2. Apply median filter to remove salt-and-pepper noise
+3. Apply bilateral filter to smooth the image while keeping edges sharp
+4. Perform edge detection to create a mask
+5. Overlay the edges on the smoothed image
+6. Quantize colors to reduce the number of shades
+7. Show the original image, edge-detected image, and cartoon image side by side
 
 ---
 
-## 📚 Learning & Experience
+## How to Run the Code
 
-This project served as a practical introduction to **Computer Vision** concepts and MATLAB programming. Key learnings include:
-- Implementing advanced image filters
-- Understanding edge-preserving algorithms
-- Exploring color quantization as a clustering problem
-- Building an interactive image-processing GUI
+1. Open the project folder in MATLAB.
+2. Open the main `.m` file (e.g., `cartoonify_image.m`)
+3. On **line 4**, change the file name to your input image (e.g., `'image.jpg'`)
+4. Make sure the image is in the same folder as the code.
+5. Click the **Run** button.
+6. Choose input method:
+   - Click **"Local Image"** to select a file
+   - Click **"Webcam"** to take a photo
+7. The output images will be displayed in a new window.
+8. You can save the result from `File → Save`.
 
 ---
+
+## Files in the Project
+
+- `cartoonify_image.m`: Main MATLAB code
+- `README.md`: Project description
+- (Optional) `sample_images/`: Folder with example images
+
+---
+
+## Requirements
+
+- MATLAB (no external libraries required)
+- Webcam (optional, for webcam input)
+
+---
+
