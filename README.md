@@ -53,7 +53,6 @@ The goal of this project is to create a cartoon version of an image. The program
 
 - `cartoonify_image.m`: Main MATLAB code
 - `README.md`: Project description
-- (Optional) `sample_images/`: Folder with example images
 
 ---
 
